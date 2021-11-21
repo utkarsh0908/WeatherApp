@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap");
+$primary-color: #313375;
+$base-color: rgb(255, 255, 255);
+$highlight-color: #ffc938;
+$height: 100vh;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//navbar
+.navbar {
+    font-weight: 400;
+    font-family: "Shippori Antique B1", sans-serif;
+    padding: 1rem 1rem;
+    background-color: $base-color;
+    height: 16vh;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar a {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+.highlight {
+    color: $highlight-color;
+    font-weight: 600;
+}
+
+// home page
+.main-header {
+    color: $primary-color;
+    height: $height;
+    font-family: "Shippori Antique B1", sans-serif;
+    height: 80vh;
+}
+
+.main_header_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.main_header_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    .upper_font {
+        font-size: 2.5rem;
+    }
+    .lower_font {
+        font-size: 1rem;
+    }
+}
+
+.main_button {
+    margin-top: 2rem;
+    color: $primary-color;
+    background-color: $highlight-color;
+    border: none;
+    width: 60%;
+    border-radius: 10px;
+}
+.main_button:hover {
+    background-color: #ffd86c;
+    color: #292a61;
+}
+
+//Carousel
+.outer_carousel {
+    padding: 0rem 2rem 1rem 0;
+}
+
+.outer_carousel img {
+    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    width: 100%;
+    background-color: $primary-color;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    height: 4vh;
+    font-size: 0.8rem;
+}
+
+//Weather page
+.weather-head {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .w_upper_font {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    .w_lower_font {
+        font-size: 1rem;
+    }
+}
+.weather-second {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60vh;
+    .temp_form {
+        flex: 1;
+        position: relative;
+        width: 40%;
+        #cityName {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            width: 100%;
+            border: 1px solid $primary-color;
+        }
+        #subButton {
+            margin-top: 1rem;
+            width: auto;
+            height: fit-content;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            padding: 0.4rem;
+            background-color: $highlight-color;
+            color: $primary-color;
+            border: none;
+            border-radius: 0.5rem;
+        }
+    }
+    .temp_info {
+        width: 40%;
+        border: 0.5px solid $primary-color;
+        flex: 3;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        .top_layer {
+            font-size: 1.2rem;
+            font-weight: 400;
+            flex: 1;
+            background-color: $highlight-color;
+            border-radius: 0.5rem 0.5rem 0 0;
+            padding: 0.5rem 1rem 0 1rem;
+            display: flex;
+            flex-direction: row;
+            p:first-child {
+                margin-right: auto;
+            }
+        }
+        .middle_layer {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-direction: column;
+            flex: 10;
+            #outputCity {
+                margin-left: 3rem;
+            }
+            .main_layer {
+                margin-left: 2.5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 20%;
+            }
+            p:first-child {
+                width: fit-content;
+                font-size: 2rem;
+                margin-left: 4.5rem;
+            }
+            .temp {
+                font-size: 0.5rem;
+            }
+            .temp_status {
+                margin-left: 1rem;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+//Extra Classes
+.data-hide {
+    visibility: hidden;
+}

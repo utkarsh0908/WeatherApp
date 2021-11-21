@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar {
+  font-weight: 400;
+  font-family: "Shippori Antique B1", sans-serif;
+  padding: 1rem 1rem;
+  background-color: white;
+  height: 16vh;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.navbar a {
+  color: #313375;
+  text-decoration: none;
+}
+
+.highlight {
+  color: #ffc938;
+  font-weight: 600;
+}
+
+.main-header {
+  color: #313375;
+  height: 100vh;
+  font-family: "Shippori Antique B1", sans-serif;
+  height: 80vh;
+}
+
+.main_header_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+}
+
+.main_header_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65vh;
+}
+
+.main_header_left .upper_font {
+  font-size: 2.5rem;
+}
+
+.main_header_left .lower_font {
+  font-size: 1rem;
+}
+
+.main_button {
+  margin-top: 2rem;
+  color: #313375;
+  background-color: #ffc938;
+  border: none;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.main_button:hover {
+  background-color: #ffd86c;
+  color: #292a61;
+}
+
+.outer_carousel {
+  padding: 0rem 2rem 1rem 0;
+}
+
+.outer_carousel img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer {
+  width: 100%;
+  background-color: #313375;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.2rem;
+  height: 4vh;
+  font-size: 0.8rem;
+}
+
+.weather-head {
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.weather-head .w_upper_font {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.weather-head .w_lower_font {
+  font-size: 1rem;
+}
+
+.weather-second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60vh;
+}
+
+.weather-second .temp_form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  width: 40%;
+}
+
+.weather-second .temp_form #cityName {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: 1px solid #313375;
+}
+
+.weather-second .temp_form #subButton {
+  margin-top: 1rem;
+  width: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  padding: 0.4rem;
+  background-color: #ffc938;
+  color: #313375;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.weather-second .temp_info {
+  width: 40%;
+  border: 0.5px solid #313375;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.weather-second .temp_info .top_layer {
+  font-size: 1.2rem;
+  font-weight: 400;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #ffc938;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 0.5rem 1rem 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.weather-second .temp_info .top_layer p:first-child {
+  margin-right: auto;
+}
+
+.weather-second .temp_info .middle_layer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+}
+
+.weather-second .temp_info .middle_layer #outputCity {
+  margin-left: 3rem;
+}
+
+.weather-second .temp_info .middle_layer .main_layer {
+  margin-left: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 20%;
+}
+
+.weather-second .temp_info .middle_layer p:first-child {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 2rem;
+  margin-left: 4.5rem;
+}
+
+.weather-second .temp_info .middle_layer .temp {
+  font-size: 0.5rem;
+}
+
+.weather-second .temp_info .middle_layer .temp_status {
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+.data-hide {
+  visibility: hidden;
+}
+/*# sourceMappingURL=style.css.map */

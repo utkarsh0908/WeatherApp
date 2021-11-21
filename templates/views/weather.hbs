@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>headLinks}}
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="main-header">
+    {{>navbar}}
+    <div class="container-fluid main-header">
+      <div class="row">
+        <div class="col-md-12 col-10">
+          <div class="row weather-head">
+            <div class="w_upper_font"> Choose a City</div>
+            <div class="w_lower_font"> Select a city or country to see the weather</div>
+          </div>
+          <div class="row weather-second">
+            <form class="temp_form">
+              <input placeholder="Enter your city name" autocomplete="off" type="text" id="cityName">
+              <input placeholder="Search" type="submit" id="subButton" value="search">
+            </form>
+            <div class="temp_info">
+              <div class="top_layer">
+                <p id="day"></p>
+                <p id="date"></p>
+              </div>
+              <div class="middle_layer">
+                <p id="outputCity">Output will be displayed here!</p>
+                <div id="main_layer" class="main_layer data-hide">
+                  <p><span id="temp">0</span><sup>o</sup>C</p>
+                  <p class="temp_status"><i class="fas " id="temp_status" aria-hidden="true"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{>footer}}
+  </div>
+  <script src="js/main.js"></script>
+  <script>
+    const setDay = document.getElementById("day");
+    const setDate = document.getElementById("date");
+
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const Month = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+    
+    let currentTime = new Date();
+    let day = weekday[currentTime.getDay()];
+    let date = currentTime.getDate();
+    let month = Month[currentTime.getMonth()];
+    console.log(`${date} ${month}`);
+    setDay.innerText = day;
+    setDate.innerText = `${date}, ${month}`;
+  </script>
+</body>
+
+
+</html>
