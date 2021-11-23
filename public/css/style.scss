@@ -3,30 +3,38 @@
 $primary-color: #313375;
 $base-color: rgb(255, 255, 255);
 $highlight-color: #ffc938;
+$about-color: #666bd0;
+$hover-highlight: #ffd86c;
+$hover-main: #292a61;
 $height: 100vh;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: $about-color;
 }
 
 //navbar
 .navbar {
+    background-color: $about-color;
     font-weight: 400;
     font-family: "Shippori Antique B1", sans-serif;
     padding: 1rem 1rem;
-    background-color: $base-color;
     height: 16vh;
 }
 
 .navbar-brand {
+    color: white;
     font-size: 2rem;
 }
 
 .navbar a {
-    color: $primary-color;
+    color: white;
     text-decoration: none;
+}
+.navbar a:hover{
+    color: $highlight-color;
 }
 
 .highlight {
@@ -76,17 +84,6 @@ $height: 100vh;
     color: #292a61;
 }
 
-//Carousel
-.outer_carousel {
-    padding: 0rem 2rem 1rem 0;
-}
-
-.outer_carousel img {
-    border-radius: 12px;
-    max-width: 100%;
-    height: auto;
-}
-
 .footer {
     width: 100%;
     background-color: $primary-color;
@@ -97,6 +94,9 @@ $height: 100vh;
     padding: 0.2rem;
     height: 4vh;
     font-size: 0.8rem;
+    div {
+        background-color: $primary-color;
+    }
 }
 
 //Weather page
@@ -108,9 +108,11 @@ $height: 100vh;
     .w_upper_font {
         font-size: 3rem;
         font-weight: 400;
+        color: white;
     }
     .w_lower_font {
         font-size: 1rem;
+        color: white;
     }
 }
 .weather-second {
@@ -129,6 +131,7 @@ $height: 100vh;
             border-radius: 0.5rem;
             width: 100%;
             border: 1px solid $primary-color;
+            background-color: white;
         }
         #subButton {
             margin-top: 1rem;
@@ -143,53 +146,108 @@ $height: 100vh;
             border: none;
             border-radius: 0.5rem;
         }
+        #subButton:hover {
+            background-color: #ffd86c;
+            color: #292a61;
+        }
     }
     .temp_info {
         width: 40%;
         border: 0.5px solid $primary-color;
         flex: 3;
-        border-radius: 0.5rem;
+        border-radius: 1rem;
         margin-bottom: 2rem;
         display: flex;
         flex-direction: column;
         .top_layer {
+            color: $highlight-color;
             font-size: 1.2rem;
-            font-weight: 400;
+            font-weight: 600;
             flex: 1;
-            background-color: $highlight-color;
-            border-radius: 0.5rem 0.5rem 0 0;
+            background-color: $primary-color;
+            border-radius: 1rem 1rem 0 0;
             padding: 0.5rem 1rem 0 1rem;
             display: flex;
             flex-direction: row;
             p:first-child {
+                background-color: $primary-color;
                 margin-right: auto;
+            }
+            #date {
+                background-color: $primary-color;
             }
         }
         .middle_layer {
+            background-color: $primary-color;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: stretch;
             flex-direction: column;
             flex: 10;
-            #outputCity {
-                margin-left: 3rem;
+            .top_layer_of_middle {
+                font-weight: 400;
+                background-color: $primary-color;
+                #outputCity {
+                    background-color: $primary-color;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    font-size: 2rem;
+                }
+                .wind {
+                    background-color: $primary-color;
+                    font-size: 1rem;
+                    margin: auto;
+                }
             }
             .main_layer {
-                margin-left: 2.5rem;
+                flex: 5;
+                background-color: $primary-color;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
-                width: 20%;
+                width: 100%;
             }
-            p:first-child {
-                width: fit-content;
+            .left {
+                background-color: $primary-color;
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                font-size: 1rem;
+                margin-left: 3rem;
+                sup {
+                    background-color: $primary-color;
+                }
+            }
+            .right {
+                background-color: $primary-color;
+                font-size: 1rem;
+                flex: 1;
+                #pressure {
+                    background-color: $primary-color;
+                }
+                #humidity {
+                    background-color: $primary-color;
+                }
+                #feelsLike {
+                    background-color: $primary-color;
+                }
+            }
+            #temp {
+                background-color: $primary-color;
+                color: $highlight-color;
                 font-size: 2rem;
-                margin-left: 4.5rem;
             }
             .temp {
-                font-size: 0.5rem;
+                background-color: $primary-color;
+                color: $highlight-color;
+                font-size: 2rem;
             }
             .temp_status {
+                background-color: $primary-color;
                 margin-left: 1rem;
                 font-size: 2rem;
             }
@@ -200,4 +258,13 @@ $height: 100vh;
 //Extra Classes
 .data-hide {
     visibility: hidden;
+}
+
+.ranchi {
+    background-color: $primary-color;
+    margin-left: 3rem;
+}
+
+.bg{
+    background-color: $primary-color;
 }

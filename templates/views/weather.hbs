@@ -3,6 +3,8 @@
 
 <head>
   {{>headLinks}}
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -27,10 +29,19 @@
                 <p id="date"></p>
               </div>
               <div class="middle_layer">
-                <p id="outputCity">Output will be displayed here!</p>
+                <div class="top_layer_of_middle">
+                  <p id="outputCity">Output will be displayed here!</p>
+                </div>
                 <div id="main_layer" class="main_layer data-hide">
-                  <p><span id="temp">0</span><sup>o</sup>C</p>
-                  <p class="temp_status"><i class="fas " id="temp_status" aria-hidden="true"></i></p>
+                  <div class="left">
+                    <p class="temp"><span id="temp">0</span><sup class="bg">o</sup>C</p>
+                    <p class="temp_status"><i class="fas" id="temp_status" aria-hidden="true"></i></p>
+                  </div>
+                  <div class="right">
+                    <p id="pressure"></p>
+                    <p id="humidity"></p>
+                    <p id="feelsLike"></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -48,7 +59,7 @@
 
     const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const Month = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
-    
+
     let currentTime = new Date();
     let day = weekday[currentTime.getDay()];
     let date = currentTime.getDate();
@@ -58,6 +69,5 @@
     setDate.innerText = `${date}, ${month}`;
   </script>
 </body>
-
 
 </html>

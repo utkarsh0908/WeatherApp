@@ -6,6 +6,11 @@ const temp_status = document.getElementById("temp_status");
 const outputCity = document.getElementById("outputCity");
 const mainLayer = document.getElementById("main_layer");
 
+//other infos
+const pressureDiv = document.getElementById("pressure");
+const humidityDiv = document.getElementById("humidity");
+const feelsDiv = document.getElementById("feelsLike");
+
 const getInfo = async (event) => {
     event.preventDefault();
     let city = cityname.value;
@@ -20,21 +25,32 @@ const getInfo = async (event) => {
             const arr = [data];
             const country = arr[0].sys.country;
             temp.innerText = arr[0].main.temp;
-            outputCity.innerText = `${city.toUpperCase()}, ${country}`;
             const tempStatus = arr[0].weather[0].main;
+            const pressure = arr[0].main.pressure;
+            const humidity = arr[0].main.humidity;
+            const feels = arr[0].main.feels_like;
+            const wind = arr[0].wind.speed;
+            pressureDiv.innerText = `Pressure: ${pressure} mbar`;
+            humidityDiv.innerText = `Humidity: ${humidity}%`;
+            feelsDiv.innerHTML = `<p id="feelsLike">Feels like: ${feels}</span><sup class="bg">o</sup>C</p>`;
+            outputCity.innerHTML = `<p class="ranchi">${city.toUpperCase()}, ${country}</p> <p class="wind">Wind speed: ${wind}kmph</p>`;
             
             if(tempStatus === "Clear"){
-                temp_status.classList.add("fa-sun");
+                temp_status.innerHTML = `<i class="fas fa-sun bg" style='color: #ffc938;' id="temp_status" aria-hidden="true"></i>`;
             }else if(tempStatus === "Haze"){
-                temp_status.classList.add("fa-smog");
+                temp_status.innerHTML = `<i class="fas fa-smog bg" style='color: #ffc938;' id="temp_status" aria-hidden="true"></i>`;
+            }else if(tempStatus === "Mist"){
+                temp_status.innerHTML = `<i class="fas fa-smog bg" style='color: #ffc938;' id="temp_status" aria-hidden="true"></i>`;
+            }else if(tempStatus === "Smoke"){
+                temp_status.innerHTML = `<i class="fas fa-smog bg" style='color: #ffc938;' id="temp_status" aria-hidden="true"></i>`;
             }else if(tempStatus === "Clouds"){
-                temp_status.classList.add("fa-cloud");
+                temp_status.innerHTML = `<i class="fas fa-cloud bg" style='color: #ffc938;' id="temp_status" aria-hidden="true"></i>`;
             }
             else if(tempStatus === "Rain"){
-                temp_status.classList.add("fa-cloud-rain");
+                temp_status.innerHTML = `<i class="fas fa-cloud-rain" style='color: #ffc938;' id="temp_status" aria-hidden="true"></i>`;
             }
             else {
-                temp_status.classList.add("fa-cloud");
+                temp_status.innerHTML = `<i class="fas fa-wind" style='color: #313375;' id="temp_status" aria-hidden="true"></i>`;
             }
             mainLayer.classList.remove("data-hide");
         }

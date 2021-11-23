@@ -5,23 +5,29 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #666bd0;
 }
 
 .navbar {
+  background-color: #666bd0;
   font-weight: 400;
   font-family: "Shippori Antique B1", sans-serif;
   padding: 1rem 1rem;
-  background-color: white;
   height: 16vh;
 }
 
 .navbar-brand {
+  color: white;
   font-size: 2rem;
 }
 
 .navbar a {
-  color: #313375;
+  color: white;
   text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ffc938;
 }
 
 .highlight {
@@ -88,16 +94,6 @@
   color: #292a61;
 }
 
-.outer_carousel {
-  padding: 0rem 2rem 1rem 0;
-}
-
-.outer_carousel img {
-  border-radius: 12px;
-  max-width: 100%;
-  height: auto;
-}
-
 .footer {
   width: 100%;
   background-color: #313375;
@@ -114,6 +110,10 @@
   padding: 0.2rem;
   height: 4vh;
   font-size: 0.8rem;
+}
+
+.footer div {
+  background-color: #313375;
 }
 
 .weather-head {
@@ -133,10 +133,12 @@
 .weather-head .w_upper_font {
   font-size: 3rem;
   font-weight: 400;
+  color: white;
 }
 
 .weather-head .w_lower_font {
   font-size: 1rem;
+  color: white;
 }
 
 .weather-second {
@@ -170,6 +172,7 @@
   border-radius: 0.5rem;
   width: 100%;
   border: 1px solid #313375;
+  background-color: white;
 }
 
 .weather-second .temp_form #subButton {
@@ -188,13 +191,18 @@
   border-radius: 0.5rem;
 }
 
+.weather-second .temp_form #subButton:hover {
+  background-color: #ffd86c;
+  color: #292a61;
+}
+
 .weather-second .temp_info {
   width: 40%;
   border: 0.5px solid #313375;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,13 +214,14 @@
 }
 
 .weather-second .temp_info .top_layer {
+  color: #ffc938;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #ffc938;
-  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: #313375;
+  border-radius: 1rem 1rem 0 0;
   padding: 0.5rem 1rem 0 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,10 +233,17 @@
 }
 
 .weather-second .temp_info .top_layer p:first-child {
+  background-color: #313375;
   margin-right: auto;
 }
 
+.weather-second .temp_info .top_layer #date {
+  background-color: #313375;
+}
+
 .weather-second .temp_info .middle_layer {
+  background-color: #313375;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,12 +262,41 @@
           flex: 10;
 }
 
-.weather-second .temp_info .middle_layer #outputCity {
-  margin-left: 3rem;
+.weather-second .temp_info .middle_layer .top_layer_of_middle {
+  font-weight: 400;
+  background-color: #313375;
+}
+
+.weather-second .temp_info .middle_layer .top_layer_of_middle #outputCity {
+  background-color: #313375;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.weather-second .temp_info .middle_layer .top_layer_of_middle .wind {
+  background-color: #313375;
+  font-size: 1rem;
+  margin: auto;
 }
 
 .weather-second .temp_info .middle_layer .main_layer {
-  margin-left: 2.5rem;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  background-color: #313375;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,27 +306,77 @@
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 20%;
+  width: 100%;
 }
 
-.weather-second .temp_info .middle_layer p:first-child {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.weather-second .temp_info .middle_layer .left {
+  background-color: #313375;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1rem;
+  margin-left: 3rem;
+}
+
+.weather-second .temp_info .middle_layer .left sup {
+  background-color: #313375;
+}
+
+.weather-second .temp_info .middle_layer .right {
+  background-color: #313375;
+  font-size: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.weather-second .temp_info .middle_layer .right #pressure {
+  background-color: #313375;
+}
+
+.weather-second .temp_info .middle_layer .right #humidity {
+  background-color: #313375;
+}
+
+.weather-second .temp_info .middle_layer .right #feelsLike {
+  background-color: #313375;
+}
+
+.weather-second .temp_info .middle_layer #temp {
+  background-color: #313375;
+  color: #ffc938;
   font-size: 2rem;
-  margin-left: 4.5rem;
 }
 
 .weather-second .temp_info .middle_layer .temp {
-  font-size: 0.5rem;
+  background-color: #313375;
+  color: #ffc938;
+  font-size: 2rem;
 }
 
 .weather-second .temp_info .middle_layer .temp_status {
+  background-color: #313375;
   margin-left: 1rem;
   font-size: 2rem;
 }
 
 .data-hide {
   visibility: hidden;
+}
+
+.ranchi {
+  background-color: #313375;
+  margin-left: 3rem;
+}
+
+.bg {
+  background-color: #313375;
 }
 /*# sourceMappingURL=style.css.map */

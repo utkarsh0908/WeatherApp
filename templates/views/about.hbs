@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,24 +13,65 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
   <title>Weather</title>
 </head>
 
 <body>
   <!-- NAVBAR -->
-  {{>navbar}}
-  <div class="container-fluid main-header">
-    <div class="row">
-      <div class="col-md-12 col-10">
-        <div class="row">
-          <div class="col-md-6 col-12 main_header_left">
-            <h1> about</h1>
+  <div class="all">
+    <div class="container-fluid main-menu">
+      <div class="row">
+        <div class="col-md-12 col-10 mx-auto">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/">Weather<span class="highlight"> App</span> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/weather">Weather</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About Me</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid main-header">
+      <div class="about_main">
+        <div class="about">
+          <h1>About Me</h1>
+          <div class="content">
+            <div class="left">
+              <div class="phomto">
+
+              </div>
+            </div>
+            <div class="right">
+              <p class="first_para">I am a second year student at Indian Institute of Information Technology Ranchi,
+                India
+                pursuing Bachelor of Technology (B.Tech) in Electronics and Communication.</p>
+              <p class="second_para">I am proficient in C++ with a decent knowledge of java, python, javascript. I've
+                been
+                doing programming since 12th standard. I've been into Web Apps Development using REACT since 1st
+                semester
+                of my Bachelor's.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    {{>footer}}
   </div>
-</div>
 </body>
+
 </html>

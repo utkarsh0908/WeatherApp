@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap");
+$primary-color: #313375;
+$base-color: rgb(255, 255, 255);
+$highlight-color: #ffc938;
+$about-color: #666bd0;
+$height: 100vh;
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  .navbar {
+    font-weight: 400;
+    font-family: "Shippori Antique B1", sans-serif;
+    padding: 1rem 1rem;
+    background-color: white;
+    height: 16vh;
+  }
+  
+  .navbar-brand {
+    font-size: 2vw;
+  }
+  
+  .navbar a {
+    color: #313375;
+    text-decoration: none;
+  }
+  .nav-link:hover{
+    color: $highlight-color;
+}
+  
+  .highlight {
+    color: #ffc938;
+    font-weight: 600;
+  }
+
+  .main-header {
+    color: $primary-color;
+    height: $height;
+    font-family: "Shippori Antique B1", sans-serif;
+    height: 80vh;
+}
+
+.main_header_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.main_header_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    .upper_font {
+        font-size: 2.5vw;
+    }
+    .lower_font {
+        font-size: 1vw;
+    }
+}
+
+.main_button {
+    margin-top: 2rem;
+    color: $primary-color;
+    background-color: $highlight-color;
+    border: none;
+    width: 60%;
+    border-radius: 10px;
+}
+.main_button:hover {
+    background-color: #ffd86c;
+    color: #292a61;
+}
+
+//Carousel
+.outer_carousel {
+    padding: 0 2vw 1vw 0;
+}
+
+.outer_carousel img {
+    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
+}
+//footer
+.footer {
+    width: 100%;
+    background-color: $primary-color;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    height: 4vh;
+    font-size: 0.8rem;
+    div{
+        background-color: $primary-color;
+    }
+}
+
+
+
+// media queries
+@media only screen and (max-width: 600px) {
+    .main_header_right {
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid red;
+        }
+    .main_header_left {
+        height: 40vh;
+    }
+    .outer_carousel {
+        display: none;
+    }
+    
+}

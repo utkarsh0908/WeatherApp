@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.navbar {
+  font-weight: 400;
+  font-family: "Shippori Antique B1", sans-serif;
+  padding: 1rem 1rem;
+  background-color: white;
+  height: 16vh;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.navbar a {
+  color: #313375;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #ffc938;
+}
+
+.highlight {
+  color: #ffc938;
+  font-weight: 600;
+}
+
+.about_main {
+  width: 100%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about_main .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  padding: 1rem;
+  width: 70%;
+  height: 80%;
+  border-radius: 2rem;
+  background-color: #666bd0;
+}
+
+.about_main .about h1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.about_main .about .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.about_main .about .content .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.about_main .about .content .left .phomto {
+  width: 50%;
+  height: 90%;
+  background-color: #313375;
+  margin: auto;
+  border-radius: 2rem;
+}
+
+.about_main .about .content .right {
+  padding: 0.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.about_main .about .content .right .first_para {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.about_main .about .content .right .second_para {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.footer {
+  width: 100%;
+  background-color: #313375;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.2rem;
+  height: 4vh;
+  font-size: 0.8rem;
+  font-family: "Shippori Antique B1", sans-serif;
+}
+/*# sourceMappingURL=about.css.map */

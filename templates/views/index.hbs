@@ -3,12 +3,39 @@
 
 <head>
   {{>headLinks}}
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
   <!-- NAVBAR -->
   <div class="main-header">
-    {{>navbar}}
+    <div class="all">
+  <div class="container-fluid main-menu">
+    <div class="row">
+      <div class="col-md-12 col-10 mx-auto">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="/">Weather<span class="highlight"> App</span> </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/weather">Weather</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 col-10">
